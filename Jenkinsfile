@@ -19,13 +19,13 @@ pipeline {
 
         stage('unit tests'){
             steps {
-                yarn test
+                sh 'yarn test'
             }
         }
 
         stage('unit tests'){
             steps {
-                yarn test:e2e
+                sh 'yarn test:e2e'
             }
         }
 
