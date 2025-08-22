@@ -18,11 +18,15 @@ pipeline {
         }
 
         stage('unit tests'){
-            yarn test
+            steps {
+                yarn test
+            }
         }
 
         stage('unit tests'){
-            yarn test:e2e
+            steps {
+                yarn test:e2e
+            }
         }
 
         stage('deploy') {
